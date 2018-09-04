@@ -229,6 +229,132 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://wendy926.github.io/2018/09/05/goroutine/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Little Dolphin">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="dolphin的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/09/05/goroutine/" itemprop="url">Go memory model</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-04T17:31:11Z">
+                2018-09-04
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <blockquote>
+<p>前言：Go内存模型能保证 一个协程A对变量a有修改，则另一个协程B取变量a的值时，协程B能知道协程A对变量a的修改，并获得变量a的最新值，即这是一种原子操作，协程A\B共享一块内存。但是，如果一段程序想修改多个协程公用的变量时，需要将多协程的数据访问变为序列化访问。</p>
+</blockquote>
+<h1 id="Happens-Before原则"><a href="#Happens-Before原则" class="headerlink" title="Happens Before原则"></a>Happens Before原则</h1><h3 id="对于单个协程：对变量v的读操作r，写操作w，满足一下两点，可以保证能读到最新的修改。"><a href="#对于单个协程：对变量v的读操作r，写操作w，满足一下两点，可以保证能读到最新的修改。" class="headerlink" title="对于单个协程：对变量v的读操作r，写操作w，满足一下两点，可以保证能读到最新的修改。"></a>对于单个协程：对变量v的读操作r，写操作w，满足一下两点，可以保证能读到最新的修改。</h3><ol>
+<li>写在读之前或同时发生；在写操作w后不会有另一个写操作w’在读操作r前发生。</li>
+<li>写在读之前发生；在写操作w之前和读操作r之后，不会有任何读写操作。</li>
+</ol>
+<h3 id="对于多个协程：必须通过同步事件，保证读操作能读到想要的结果。"><a href="#对于多个协程：必须通过同步事件，保证读操作能读到想要的结果。" class="headerlink" title="对于多个协程：必须通过同步事件，保证读操作能读到想要的结果。"></a>对于多个协程：必须通过同步事件，保证读操作能读到想要的结果。</h3>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://wendy926.github.io/2018/09/05/firstToutch/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -307,129 +433,6 @@
 <p>都不是，浮现脑海的是宁静的夜晚，在格里菲斯天文台山的盘山公路上，俯瞰天使城的星星点点，没有路灯的干扰，只是开车匆匆下山时的一瞥，便终身难忘，如同看见了繁星，一瞬间震撼了心灵。</p>
 <h2 id="电影中的场景，我都走过"><a href="#电影中的场景，我都走过" class="headerlink" title="电影中的场景，我都走过"></a>电影中的场景，我都走过</h2><p>天使与魔鬼 梵蒂冈，罗马天使城<br>蚁人2      旧金山渔人码头<br>碟中谍6    巴黎的凯旋门，埃菲尔铁塔，战神广场<br>。。。</p>
 <h2 id="在路上，期待"><a href="#在路上，期待" class="headerlink" title="在路上，期待"></a>在路上，期待</h2><p>去富士山泡温泉，在撒哈拉路上找寻自己的荷西，然后去黄刀镇看极光。</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://wendy926.github.io/2018/09/03/goroutine/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Little Dolphin">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="dolphin的博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/09/03/goroutine/" itemprop="url">Go memory model</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-02T16:32:07Z">
-                2018-09-02
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="前言：Go内存模型能保证-一个协程A对变量a有修改，则另一个协程B取变量a的值时，协程B能知道协程A对变量a的修改，并获得变量a的最新值，即这是一种原子操作，协程A-B共享一块内存。但是，如果一段程序想修改多个协程公用的变量时，需要将多协程的数据访问变为序列化访问。"><a href="#前言：Go内存模型能保证-一个协程A对变量a有修改，则另一个协程B取变量a的值时，协程B能知道协程A对变量a的修改，并获得变量a的最新值，即这是一种原子操作，协程A-B共享一块内存。但是，如果一段程序想修改多个协程公用的变量时，需要将多协程的数据访问变为序列化访问。" class="headerlink" title="前言：Go内存模型能保证 一个协程A对变量a有修改，则另一个协程B取变量a的值时，协程B能知道协程A对变量a的修改，并获得变量a的最新值，即这是一种原子操作，协程A\B共享一块内存。但是，如果一段程序想修改多个协程公用的变量时，需要将多协程的数据访问变为序列化访问。"></a>前言：Go内存模型能保证 一个协程A对变量a有修改，则另一个协程B取变量a的值时，协程B能知道协程A对变量a的修改，并获得变量a的最新值，即这是一种原子操作，协程A\B共享一块内存。但是，如果一段程序想修改多个协程公用的变量时，需要将多协程的数据访问变为序列化访问。</h2><h1 id="Happens-Before原则"><a href="#Happens-Before原则" class="headerlink" title="Happens Before原则"></a>Happens Before原则</h1><h2 id="对于单个协程：对变量v的读操作r，写操作w，满足一下两点，可以保证能读到最新的修改。"><a href="#对于单个协程：对变量v的读操作r，写操作w，满足一下两点，可以保证能读到最新的修改。" class="headerlink" title="对于单个协程：对变量v的读操作r，写操作w，满足一下两点，可以保证能读到最新的修改。"></a>对于单个协程：对变量v的读操作r，写操作w，满足一下两点，可以保证能读到最新的修改。</h2><ol>
-<li>写在读之前或同时发生；在写操作w后不会有另一个写操作w’在读操作r前发生。</li>
-<li>写在读之前发生；在写操作w之前和读操作r之后，不会有任何读写操作。<h2 id="对于多个协程：必须通过同步事件，保证读操作能读到想要的结果。"><a href="#对于多个协程：必须通过同步事件，保证读操作能读到想要的结果。" class="headerlink" title="对于多个协程：必须通过同步事件，保证读操作能读到想要的结果。"></a>对于多个协程：必须通过同步事件，保证读操作能读到想要的结果。</h2></li>
-</ol>
 
           
         
